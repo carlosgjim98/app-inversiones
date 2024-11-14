@@ -1,0 +1,139 @@
+  
+  .chart-header {
+   
+    margin-top:30px ;
+    margin-left: 0px;
+ 
+  
+    h2 {
+      font-size: 14px;
+      color: #B7A44F;
+      font-family: Manrope-Medium;
+      
+    }
+  }
+    .investment-section {
+    .investment-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #1C1B19;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+      .investment-info {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;  
+        
+  
+        .icon-circle {
+          width: 40px;  // Tamaño de la esfera
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #31312F; // Color de fondo de la esfera
+          border-radius: 50%; // Hace que el contenedor sea circular
+          margin-right: 10px;
+  
+          ion-icon {
+            height: 25px;
+            width: 25px;
+            color: #2C2E2C; // Color del ícono dentro de la esfera
+          }
+        }
+        .investment-title {
+          font-size: 15px;
+          font-family: Manrope-Medium;
+          color: #FFFFFF;
+          margin-bottom: 6px;
+        }
+  
+        .investment-detail {
+          font-size: 13px;
+          font-family: Manrope-Medium;
+          color: #A8A8A8;
+          margin-top: 0;
+        }
+      }
+  
+      .investment-amount {
+        
+        display: flex;
+        ;
+  
+        p {
+          margin: 0;
+          font-size: 15px;
+          color: #FFFFFF;
+          font-family: Manrope-SemiBold;
+  
+          &.positive-gain {
+            color: #45B456; // Color para ganancias positivas
+            margin-left: 10px;
+          }
+  
+          &.negative-gain {
+            color: #FF4D4D; // Color para pérdidas
+          }
+        }
+      
+    
+    }
+}
+}
+
+
+.chart-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  
+}
+
+
+  .item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* Cambia este color si el fondo de tu aplicación es oscuro */
+    font-size: 12px;
+    font-family: Lato;
+  }
+  
+  .color-box {
+    width: 16px;
+    height: 16px;
+    border-radius: 5px; /* Esto le da bordes redondeados */
+    margin-right: 10px;
+   
+   
+  }
+  .grafico{
+
+   margin-top: 40px;
+  }
+
+  .chart-container {
+    background: linear-gradient(180deg, #181A18, #2C2E2C);
+    box-shadow: 0px 5px 10px #0D0C0C; /* Sombra paralela */
+    border: 1px solid #2A2A2A;
+    border-radius: 10px;
+    margin-top:0px;
+    margin-bottom: 15px;
+    padding: 15px;
+    
+   
+  }
+

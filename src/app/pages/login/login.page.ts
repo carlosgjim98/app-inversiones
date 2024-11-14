@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
 
     this.form = new FormGroup({
-      email: new FormControl('info@xerintel.es', 
+      email: new FormControl('correo@prueba.com', 
         {validators: [Validators.required, Validators.email]}
       ),
       password: new FormControl('xeripassword', 

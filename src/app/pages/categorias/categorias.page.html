@@ -1,0 +1,45 @@
+<ion-header >
+  <div class="header-container">
+  <h1>Consulta aquí <br> todas <span>las categorías</span></h1>
+</div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+ 
+    <div class="category-container">
+       
+
+        <div class="category-grid">
+            <ion-card class="category-card" routerLink="/categorias-turistico">
+                <ion-icon src="assets/icons/categorias/Trazado 49436.svg"></ion-icon>
+                <p>Turístico</p>
+            </ion-card>
+
+            <ion-card class="category-card" routerLink="/categorias-inmobiliaria">
+              <ion-icon src="assets/icons/categorias/flat_1684019.svg"></ion-icon>
+                <p>Inmobiliaria</p>
+            </ion-card>
+
+            <ion-card class="category-card" routerLink="/categorias-empleados">
+              <ion-icon src="assets/icons/categorias/team_11087946.svg"></ion-icon>
+                <p>Empleados</p>
+            </ion-card>
+
+            <ion-card class="category-card" routerLink="/categorias-inquilinos">
+              <ion-icon src="assets/icons/categorias/Unión 5.svg"></ion-icon>
+                <p>Inquilinos</p>
+            </ion-card>
+
+            <ion-card class="category-card" routerLink="/categorias-proyectos-a-futuro">
+              <ion-icon src="assets/icons/categorias/growth_5660928.svg"></ion-icon>
+                <p>Proyectos a futuro</p>
+            </ion-card>
+
+            <ion-card class="category-card" routerLink="/categorias-facturas">
+              <ion-icon src="assets/icons/categorias/ticket_9420339.svg"></ion-icon>
+                <p>Facturas</p>
+            </ion-card>
+        </div>
+    </div>
+</ion-content>
+

@@ -2,7 +2,7 @@
     "LOGIN":{
         "HEADER" : "Inicio sesión",
         "TITLE" : "¡Loguéate para ver nuestras novedades!",
-        "USER" : "Usuario",
+        "USER" : "correo@prueba.com",
         "PASSWORD" : "Contraseña",
         "LOGIN" : "Iniciar sesión",
         "SIGNUP" : "Registrarse",
@@ -22,8 +22,10 @@
 
     "FORGOT_PASSWORD": {
         "HEADER": "Recuperar contraseña",
-        "TITLE": "Introduce tu email",
-        "EMAIL": "Email",
+        "TITLE": "¿No recuerdas tu contraseña?",
+        "SUBTITLE": "Escribe tu email",
+        "SUBTITLE2": " y te enviaremos una nueva clave",
+        "EMAIL": "correo@prueba.com",
         "SEND": "Enviar"
     },
 

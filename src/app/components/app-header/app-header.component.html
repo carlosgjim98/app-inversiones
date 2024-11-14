@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <div class="custom-header">
+      <div class="header-content">
+        <ion-button class="back-button" fill="solid"  (click)="goBack()">
+          <ion-icon class="icono" slot="start" src="../../../assets/icons/arrow-to-down-right-svgrepo-com.svg"></ion-icon>
+        </ion-button>
+        <p class="header-title">{{ title }}</p>
+
+        <!-- Aquí se inserta el contenido adicional (botones, íconos) -->
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>

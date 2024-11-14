@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-container">
+      <div class="header-text">
+        <h2>Fondos de inversión</h2>
+      </div>
+      
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1> Situación actual</h1>
+  <div class="chart-container"> 
+
+    <p class="total-money">34.594.803€</p>
+    <p class="gains">+26.324€</p>
+
+  </div>
+
+  <h1> Fondos de inversión y crecimiento</h1>
+  
+    <div class="chart-header">
+        
+      <ion-segment [(ngModel)]="selectedOption" (ionChange)="onOptionChange()" >
+        <ion-segment-button value="YTD">YTD</ion-segment-button>
+        <ion-segment-button value="1A">1A</ion-segment-button>
+        <ion-segment-button value="3A">3A</ion-segment-button>
+        <ion-segment-button value="5A">5A</ion-segment-button>
+        <ion-segment-button value="10A" checked>10A</ion-segment-button>
+        <ion-segment-button value="Todo" checked>Todo</ion-segment-button>
+      </ion-segment>
+    </div>
+    <div class="chart-container"> 
+    <div class="chart-content">
+        
+      <canvas id="lineChart" class="grafico"></canvas>
+
+    </div>
+
+    <ul class="item-list">
+      <li class="item">
+        <span class="color-box" style="background-color: #B8A44F;"></span>
+        Financiero
+      </li>
+      <li class="item">
+        <span class="color-box" style="background-color: #DC5C7E;"></span>
+        Inmobiliario
+      </li>
+      <li class="item">
+        <span class="color-box" style="background-color: #4F4FB8;"></span>
+        Efectivo
+      </li>
+      <li class="item">
+        <span class="color-box" style="background-color: #874FB8;"></span>
+        Otros
+      </li>
+    </ul>
+    
+    </div>
+
+    <div class="investment-section">
+      <h2>Mis inversiones</h2>
+      <div class="investment-card" routerLink="/fondos-inversion-details">
+        <div class="investment-info">
+          <div class="icon-circle">
+          <ion-icon src="assets/icons/Building Bank.svg"></ion-icon>
+        </div>
+          <div>
+            <p class="investment-title">Financiero</p>
+            <p class="investment-detail">35% del total</p>
+          </div>
+        </div>
+        <div class="investment-amount">
+          <p>70.000 €</p>
+          <p class="positive-gain">+1.000 € ▲ +10%</p>
+        </div>
+        <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+      </div>
+    
+      <div class="investment-card">
+        <div class="investment-info">
+          <div class="icon-circle">
+          <ion-icon src="assets/icons/Trazado 49428.svg"></ion-icon>
+        </div>
+            <div>
+            <p class="investment-title">Inmobiliario</p>
+            <p class="investment-detail">40% del total</p>
+          </div>
+        </div>
+        <div class="investment-amount">
+          <p>70.000 €</p>
+          <p class="positive-gain">+1.000 € ▲ +10%</p>
+        </div>
+        <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+      </div>
+    
+      <div class="investment-card">
+        <div class="investment-info">
+          <div class="icon-circle">
+          <ion-icon src="assets/icons/Trazado 49424.svg"></ion-icon>
+        </div>
+            <div>
+            <p class="investment-title">Efectivo</p>
+            <p class="investment-detail">10% del total</p>
+          </div>
+        </div>
+        <div class="investment-amount">
+          <p>70.000 €</p>
+          <p class="negative-gain">-1.000 € ▼ -10%</p>
+        </div>
+        <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+      </div>
+    
+      <div class="investment-card">
+        <div class="investment-info">
+          <div class="icon-circle">
+          <ion-icon src="assets/icons/Trazado 49425.svg"></ion-icon>
+        </div>
+          <div>
+          
+            <p class="investment-title">Otros</p>
+            <p class="investment-detail">15% del total</p>
+          </div>
+        </div>
+        <div class="investment-amount">
+          <p>150.000 €</p>
+        </div>
+        <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+      </div>
+      
+    </div>
+    
+    
+  
+</ion-content>

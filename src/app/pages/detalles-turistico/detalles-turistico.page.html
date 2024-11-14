@@ -1,0 +1,152 @@
+
+<ion-content [fullscreen]="true" >
+ 
+<div class="header">
+  <ion-toolbar class="custom-toolbar">
+
+
+    <div class="custom-header">
+      <div class="header-content">
+        <ion-button class="back-button" fill="solid"  (click)="goBack()">
+          <ion-icon class="icono" slot="start" src="../../../assets/icons/arrow-to-down-right-svgrepo-com.svg"></ion-icon>
+        </ion-button>
+       
+
+
+      </div>
+    </div>
+  </ion-toolbar>
+
+  <div class="full-container">
+
+
+  <div class="info-section">
+    <h3>Datos del piso turístico:</h3>
+    <div class="data-item">
+      <span class="label">Nombre</span>
+      <span>Casa de la playa</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Ubicación completa</span>
+      <span>C, Nombre Prueba, 1, El Puerto de Santa María (Cádiz), 11500</span>
+    </div>
+  </div>
+  
+  <!-- Sección de datos financieros -->
+  <div class="financial-data">
+    <h3>Datos financieros:</h3>
+    <div class="data-item">
+      <h2>Ingresos</h2>
+    </div>
+    <div class="data-item">
+      <span class="label">Precio por noche</span>
+      <span>115 €</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Ingresos medio mensuales</span>
+      <span>2.500€</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Ocupación media anual</span>
+      <span>45%</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Ingresos adicionales (limpieza, servicios extra)</span>
+      <span>235 €</span>
+    </div>
+  </div>
+
+  <div class="financial-data">
+    <div class="data-item">
+      <h2>Gastos</h2>
+    </div>
+    <div class="data-item">
+      <span class="label">Hipoteca</span>
+      <span>1.235 €/ al mes</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Comunidad</span>
+      <span>75€/ al mes</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Impuestos (IBI, turísticos)</span>
+      <span>1.100€/ anuales</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Seguros</span>
+      <span>580 €/ anuales</span>
+    </div>
+  </div>
+
+  <div class="financial-data">
+    <div class="data-item">
+      <h2>Rentabilidad</h2>
+    </div>
+    <div class="data-item">
+      <span class="label">Ingresos netos anuales</span>
+      <span>30.650 €</span>
+    </div>
+    <div class="data-item">
+      <span class="label">ROI</span>
+      <span>25%</span>
+    </div>
+    <div class="data-item">
+      <span class="label">Punto de equilibrio</span>
+      <span>4 meses</span>
+    </div>
+   
+  </div>
+
+  <div class="financial-data">
+    <h3>Datos Operativos:</h3>
+    <div class="data-item">
+      <span class="label">Proveedores</span> 
+    </div>
+    
+    <div class="proveedores-container">
+
+      <div class="turistic-card" routerLink="/detalles-turistico">
+        <div class="turistic-info">
+          <div class="img-container">
+            <img src="assets/icons/Grupo 13855@3x.png" alt="Icono empresa" class="img" />
+        </div>
+          <div>
+            <p class="turistic-title">Booking (18%)</p>
+          </div>
+        </div>
+        
+        <p class="price">20,70 €</p>
+      </div>
+
+      <div class="turistic-card" routerLink="/detalles-turistico">
+        <div class="turistic-info">
+          <div class="img-container">
+            <img src="assets/icons/Enmascarar grupo 1.svg" alt="Icono empresa" class="img" />
+        </div>
+          <div>
+            <p class="turistic-title">Airbnb (10%)</p>
+          </div>
+        </div>
+        
+        <p class="price">11,50 €</p>
+      </div>
+
+      <div class="turistic-card" routerLink="/detalles-turistico">
+        <div class="turistic-info">
+          <div class="img-container">
+            <img src="assets/icons/Grupo 13856@3x.png" alt="Icono empresa" class="img" />
+        </div>
+          <div>
+            <p class="turistic-title">Verbo (3%)</p>
+          </div>
+        </div>
+        
+        <p class="price">3,45 €</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+</ion-content>

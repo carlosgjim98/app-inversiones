@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="274.766" height="138.144" viewBox="0 0 274.766 138.144">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.854" y1="-0.162" x2="-0.141" y2="1.846" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#afd7f8"/>
+      <stop offset="1" stop-color="#134a79"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="1.361" y1="0.234" x2="0.084" y2="0.83" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5ca1dc"/>
+      <stop offset="1" stop-color="#0c4779"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.849" y1="0.269" x2="-0.352" y2="1.064" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b8a44f"/>
+      <stop offset="1" stop-color="#504410"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.77" y1="0.372" x2="0.002" y2="1.05" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#092946"/>
+      <stop offset="1" stop-color="#0b4d88"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_183" data-name="Grupo 183" transform="translate(0)">
+    <g id="Grupo_182" data-name="Grupo 182" transform="translate(0 40.493)">
+      <path id="Trazado_24076" data-name="Trazado 24076" d="M93.792,421.355a136.157,136.157,0,0,0-6.979,43.063h0c0,.539.034,1.067.041,1.6H222.387Z" transform="translate(-86.813 -368.519)" fill="url(#linear-gradient)"/>
+      <path id="Trazado_24077" data-name="Trazado 24077" d="M93.792,421.355a136.157,136.157,0,0,0-6.979,43.063h0c0,.539.034,1.067.041,1.6H222.387Z" transform="translate(-86.813 -368.519)" fill="url(#linear-gradient)"/>
+      <path id="Trazado_24078" data-name="Trazado 24078" d="M125.163,377.763c-2.518,7.57-20.874,27.695-30.811,50.62-7.627,17.6-7.539,38.639-7.539,45.279h0c0,.539.034,1.067.041,1.6H222.387Z" transform="translate(-86.813 -377.763)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="Trazado_24079" data-name="Trazado 24079" d="M200.533,382.4a136.122,136.122,0,0,0-96.6,41.036l96.6,96.6Z" transform="translate(-64.959 -381.981)" fill="url(#linear-gradient-4)"/>
+    <path id="Trazado_24080" data-name="Trazado 24080" d="M145.967,382.3h0c-.326,0-.644.022-.967.024V520.44H282.469c.007-.536.041-1.065.041-1.6h0A136.544,136.544,0,0,0,145.967,382.3Z" transform="translate(-7.744 -382.296)" fill="url(#linear-gradient-5)"/>
+    <path id="Trazado_24075" data-name="Trazado 24075" d="M220.4,497.428,118.808,395.834a143.621,143.621,0,0,0-33.655,55.132L220.4,497.65Z" transform="translate(-84.992 -359.655)" fill="url(#linear-gradient-6)"/>
+  </g>
+</svg>

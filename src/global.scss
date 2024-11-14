@@ -37,18 +37,31 @@
 @import "@ionic/angular/css/palettes/dark.class.css";*/
 @import "@ionic/angular/css/palettes/dark.system.css";
 
+// FONDO PARA EL ION-CONTENT
+
+ion-content{
+
+    --background:#101210;
+}
+
+// ESTILOS PARA TODOS LOS ICONOS
+ion-icon{
+
+    height: 32px;
+    width: 32px;
+}
 
 // ESTILOS PARA TODOS LOS ION TOOLBAR
 
 ion-toolbar{
     --border-width: 0;
-    --border-color: transparent;
-    --background: transparent;
     --padding-start: 16px;
     --padding-end: 16px;
     --padding-top: 16px;
     --padding-bottom: 16px;
     --background: white;
+    
+ 
 
     ion-buttons{
         ion-icon{
@@ -64,12 +77,26 @@ ion-toolbar{
 }
 
 
+h1{
+
+color: #FFFFFF;
+
+}
+
+p{
+
+color: #FFFFFF;
+}
+
 // ESTILOS PARA TODOS LOS BOTONES "EN PRINCIPIO" -- PARA CAMBIAR ESTILOS, CAMBIARLO EN UNO EN CONCRETO CON ALGUNA CLASE
 
 ion-button{
     --border-radius: var(--app-border-radius);
-    height: 48px;
-    text-transform: none;
+    --background:#B7A44F;
+    font-family: Manrope-medium;
+    font-size: 16px;
+    color: #FFFFFF;
+    height: 58px;
 }
 
 // ESTILOS PARA ITEMS Y INPUTS
@@ -86,8 +113,16 @@ ion-input{
     }
 }
 
-
-
+// ESTILOS PARA HEADER
+ion-toolbar{
+ 
+        --background: #101210;
+        padding: 10px 15px; 
+        box-shadow: 0px 3px 6px #0D0F0D;
+        
+       
+      
+}
 
 // ESTILOS FULLCALENDAR
 
@@ -193,3 +228,5 @@ full-calendar{
 .fc-theme-standard .fc-list{
     border: none;
 }
+
+/* CSS global para el gráfico */

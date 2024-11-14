@@ -93,7 +93,55 @@ const routes: Routes = [
   {
     path: 'contact-us',
     loadChildren: () => import('./pages/contact-us/contact-us.module').then( m => m.ContactUsPageModule)
+  },  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'fondos-inversion',
+    loadChildren: () => import('./pages/fondos-inversion/fondos-inversion.module').then( m => m.FondosInversionPageModule)
+  },
+  {
+    path: 'fondos-inversion-details',
+    loadChildren: () => import('./pages/fondos-inversion-details/fondos-inversion-details.module').then( m => m.FondosInversionDetailsPageModule)
+  },
+  {
+    path: 'categorias',
+    loadChildren: () => import('./pages/categorias/categorias.module').then( m => m.CategoriasPageModule)
+  },
+  {
+    path: 'categorias-turistico',
+    loadChildren: () => import('./pages/categorias-turistico/categorias-turistico.module').then( m => m.CategoriasTuristicoPageModule)
+  },
+  {
+    path: 'categorias-inmobiliaria',
+    loadChildren: () => import('./pages/categorias-inmobiliaria/categorias-inmobiliaria.module').then( m => m.CategoriasInmobiliariaPageModule)
+  },
+  {
+    path: 'categorias-empleados',
+    loadChildren: () => import('./pages/categorias-empleados/categorias-empleados.module').then( m => m.CategoriasEmpleadosPageModule)
+  },
+  {
+    path: 'categorias-inquilinos',
+    loadChildren: () => import('./pages/categorias-inquilinos/categorias-inquilinos.module').then( m => m.CategoriasInquilinosPageModule)
+  },
+  {
+    path: 'categorias-proyectos-a-futuro',
+    loadChildren: () => import('./pages/categorias-proyectos-a-futuro/categorias-proyectos-a-futuro.module').then( m => m.CategoriasProyectosAFuturoPageModule)
+  },
+  {
+    path: 'categorias-facturas',
+    loadChildren: () => import('./pages/categorias-facturas/categorias-facturas.module').then( m => m.CategoriasFacturasPageModule)
+  },
+  {
+    path: 'detalles-turistico',
+    loadChildren: () => import('./pages/detalles-turistico/detalles-turistico.module').then( m => m.DetallesTuristicoPageModule)
+  },
+  {
+    path: 'detalles-inmobiliaria',
+    loadChildren: () => import('./pages/detalles-inmobiliaria/detalles-inmobiliaria.module').then( m => m.DetallesInmobiliariaPageModule)
   }
+
 
 
 

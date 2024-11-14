@@ -1,0 +1,61 @@
+h1 {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "InterRegular";
+    margin-top: 80px;
+    margin-left: 20px;
+
+    span {
+        font-family: "InterBold";
+        color: #ffffff;
+    }
+}
+
+ion-content {
+  
+    .category-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 180px 190px; 
+        gap:20px;
+        justify-items: center; /* Alinea las tarjetas al centro horizontalmente */
+      
+    }
+
+    .category-card {
+        --background: #1C1B19;
+        --border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        width: 190px; 
+        color: #b7a44f; /* Color dorado */
+        box-shadow: 0 5px 10px #0D0C0C;
+        margin-bottom: 0px; 
+        margin-top:15px;
+
+        ion-icon {
+            height:60px ;
+            width:60px ;
+            color: #B7A44F;
+            margin-bottom: 8px; /* Espacio entre el icono y el texto */
+        }
+
+        p {
+            font-size: 16px;
+            color: #BFBFBF;
+            font-family: "Manrope-Bold";
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api.service';
@@ -13,6 +13,8 @@ export class ForgotPasswordPage implements OnInit {
 
   form: FormGroup;
   email: any;
+  
+ 
 
   constructor(
     private modalCtrl: ModalController,

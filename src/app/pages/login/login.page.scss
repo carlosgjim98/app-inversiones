@@ -5,75 +5,79 @@ ion-content{
     .title{
         margin-top:16px;
         margin-bottom: 32px;
+        font-family: Manrope-Regular;
+        font-size:18px;
     }
+
+    h1{
+
+        margin-top: 80px;
+        font-size: 30px;
+        font-family: Manrope-Bold;
+
+    }
+
     ion-button{
         text-transform: none;
     }
+
     .logo{
         margin:0 auto;
-        z-index: 2;
-        margin-top:10vh;
-        img{
-            width: 130px;
-            height: 130px; 
-        }
+        margin-top: 40px;
+       
+            width: 105px;
+            height: 70px; 
+        
         
     }
-
-    #socialLinks{
-        display: flex;
-        justify-content: space-evenly;
-        margin: 2vh 8vw 2vh 8vw;
-        //width: 85vw;
-
-        ion-icon{
-            font-size: 32px;
-        }
-        #facebook{
-            --color: white;
-            --background: #3b5998;
-            --background-activated: #4567b0;
-            --background-focused: #3b5998;
-
-            --border-radius: 50%;
-            height: 64px;
-            width: 64px;
-            margin : 0;
-            
-            
-        }
-        #google{
-            --background: white;
-            --background-activated: rgb(235, 235, 235);
-            --background-focused: white;
-            --border-radius: 50%;
-            border-radius: 50%;
-            box-shadow: 0px 0px 10px 3px #0000000a;
-            height: 64px;
-            width: 64px;
-            margin : 0;
-
-
-        }
-
-        .fa-google {
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            -webkit-text-fill-color: transparent;
-          }
-
-        #apple{
-            --background: #868686;
-            --background-activated: #909090;
-            --background-focused: #868686;
-            --color: white;
-            --border-radius: 50%;
-            height: 64px;
-            width: 64px;
-            margin : 0;
-
-        }
+  
+    ion-item {
+        --background: #1F211F;
+        color: white;
+        margin-top: 16px;
+        --border-radius: 10px;
     }
-}
+    
+   
+    ion-item:focus-within ion-icon {
+        color: #FFFFFF; /* Cambia el color del ícono a blanco cuando el input esté enfocado */
+    }
+    
+    ion-input {
+        height: 55px;
+        font-size: 15px;
+    }
+    
+   .email-icon {
+        color: #AAAAAA; /* Color inicial del icono */
+        height: 11px;
+        width: 13px;
+    }
+
+    ion-item ion-icon {
+        margin-left: 10px;
+    }
+
+    .password-icon{
+        color: #AAAAAA; 
+        height: 14px;
+        width: 14px;
+    }
+    
+   .access-container {
+
+       margin-top: 30px;
+
+       p{
+
+        color: #B7A44F;
+        font-size:14px;
+        font-family: Manrope-SemiBold;
+        text-decoration: underline; 
+       }
+    }
+  
+       
+    }
+
 
