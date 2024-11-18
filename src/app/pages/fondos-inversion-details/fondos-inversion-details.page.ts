@@ -9,6 +9,7 @@ Chart.register(...registerables);
   styleUrls: ['./fondos-inversion-details.page.scss'],
 })
 export class FondosInversionDetailsPage implements OnInit {
+  lineChart: any;
 
   constructor() { }
 
@@ -16,11 +17,13 @@ export class FondosInversionDetailsPage implements OnInit {
     
   }
 
-  ionViewWillEnter() {
-    
+  ngOnDestroy() {
+    // Destruir los gráficos al salir de la página
+    if (this.lineChart) {
+      Chart.getChart("lineChart")?.destroy()
+    }
+   
   }
-
-
   ngAfterViewInit() {
     const ctx = (document.getElementById('lineChart2') as HTMLCanvasElement)?.getContext('2d');
     
