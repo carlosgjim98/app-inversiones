@@ -6,18 +6,21 @@ import { Chart } from 'chart.js/auto';
   templateUrl: './fondos-inversion.page.html',
   styleUrls: ['./fondos-inversion.page.scss'],
 })
-export class FondosInversionPage implements OnInit, AfterViewInit, OnDestroy {
+export class FondosInversionPage implements OnInit, OnDestroy {
   lineChart: Chart | null = null;
   selectedOption: string = '1A';
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+ 
+  }
 
-  ngAfterViewInit() {
+  ionViewWillEnter() {
     this.createLineChart();
   }
 
+ 
   ngOnDestroy() {
     if (this.lineChart) {
       this.lineChart.destroy();

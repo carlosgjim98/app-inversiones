@@ -13,40 +13,48 @@ Chart.register(ChartDataLabels);
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit, OnDestroy {
+export class InicioPage implements OnInit {
   selectedYear: string = '2024';
   barChart: any;
   pieChart: any; // Agregar la propiedad pieChart
 
   constructor(private modalController: ModalController) {}
 
-  async showModal() {
-    const modal = await this.modalController.create({
-      component: ModalCapturaComponent, // Componente del modal
-      cssClass: 'custom-modal-class', // Clase para estilos adicionales
-      backdropDismiss: false, // Evita que se cierre al tocar fuera
+  openModal() {
+    this.modalController.create({
+      component: ModalCapturaComponent,
+    }).then(modal => {
+      modal.present();
     });
-
-    return await modal.present();
   }
 
   ngOnInit() {
+ 
+    this.openModal();
     this.createBarChart();
     this.createPieChart(); // Crear el gráfico de pastel al iniciar
-    // this.showModal();
     
   }
+  ionViewWillEnter(){
 
-  ngOnDestroy() {
+  
+  
+  }
+
+
+
+  ionViewWillLeave() {
     // Destruir los gráficos al salir de la página
     if (this.barChart) {
+      console.log('Destruyendo el gráfico de barras');
       this.barChart.destroy();
     }
     if (this.pieChart) {
+      console.log('Destruyendo el gráfico de pastel');
       this.pieChart.destroy(); // Destruir el gráfico de pastel
     }
   }
-
+  
   onYearChange() {
     this.updateBarChartData();
   }

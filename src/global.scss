@@ -129,7 +129,9 @@ ion-toolbar{
 ion-modal  {
     --height: auto!important; /* Altura del modal */
     --width: auto !important;
-    --background: rgba(0, 0, 0, 0.7) !important;
+     --background:#464846; // Fondo gris oscuro del modal !important;
+     --border-radius: 10px;
+     
   }
 
 // ESTILOS FULLCALENDAR

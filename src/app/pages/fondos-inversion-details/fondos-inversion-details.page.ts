@@ -15,6 +15,12 @@ export class FondosInversionDetailsPage implements OnInit {
   ngOnInit() {
     
   }
+
+  ionViewWillEnter() {
+    
+  }
+
+
   ngAfterViewInit() {
     const ctx = (document.getElementById('lineChart2') as HTMLCanvasElement)?.getContext('2d');
     
