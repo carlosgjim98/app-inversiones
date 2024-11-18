@@ -13,11 +13,13 @@ import { AppNotificationItemComponent } from './app-notification-item/app-notifi
 import { AppRatingComponent } from './app-rating/app-rating.component';
 import { ErrorViewComponent } from './error-view/error-view.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
+import { ModalCapturaComponent } from './modal-captura/modal-captura.component';
 
 const COMPONENTS = [
   AppChatItemComponent,
   AppChatGroupComponent,
   AppChatFooterComponent,
+  ModalCapturaComponent,
   AppChatHeaderComponent,
   AppLoadingComponent,
   AppRatingComponent,

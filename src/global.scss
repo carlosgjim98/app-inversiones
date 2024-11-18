@@ -124,12 +124,12 @@ ion-toolbar{
       
 }
 
-// ESTILOS PARA ALERTA
-ion-alert {
-    --background: #333333 !important; /* Fondo de la alerta */
-    --color: #ffffff !important; /* Color del texto */
-    --button-color: #FFD700 !important; /* Color de los botones */
-    --button-background-hover: #444444 !important; /* Fondo al pasar el mouse */
+// ESTILOS PARA MODAL ALERTA
+
+ion-modal  {
+    --height: auto!important; /* Altura del modal */
+    --width: auto !important;
+    --background: rgba(0, 0, 0, 0.7) !important;
   }
 
 // ESTILOS FULLCALENDAR

@@ -33,7 +33,7 @@ export class InicioPage implements OnInit, OnDestroy {
   ngOnInit() {
     this.createBarChart();
     this.createPieChart(); // Crear el gráfico de pastel al iniciar
-    this.showModal();
+    // this.showModal();
     
   }
 

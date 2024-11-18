@@ -1,6 +1,4 @@
-:host {
-    --background: rgba(0, 0, 0, 0.7); // Fondo transparente oscuro en el resto de la pantalla
-  }
+
   
   .modal-content {
     width: 244px;
@@ -16,17 +14,19 @@
   }
   
   p {
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     margin: 0;
+    font-family: Manrope-Regular;
   }
   
   .delete-icon {
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
+    --color: white !important;
   }
   
