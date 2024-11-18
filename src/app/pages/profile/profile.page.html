@@ -1,34 +1,54 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Perfil</ion-title>
-
-    <ion-buttons slot="end" routerLink="/configuration">
-      <ion-icon name="cog-outline"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 
 <app-loading [text]="'Cargando perfil...'" *ngIf="isLoading"></app-loading>
 
 <ion-content class="ion-padding" *ngIf="!isLoading">
-  <ion-avatar>
-    <img [src]="user?.avatar" (click)="adjuntarImagen()">
-  </ion-avatar>
+  
+<div class="image-content">
 
-  <form *ngIf="form" [formGroup]="form" (ngSubmit)="submitForm()">
-    <ion-item>
-      <ion-input clearInput type="text" placeholder="Nombre de usuario" formControlName="name" required>
-        <ion-icon slot="start" name="person-outline"></ion-icon>
-      </ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-input clearInput type="email" placeholder="Email" formControlName="email" required>
-        <ion-icon slot="start" name="mail-outline"></ion-icon>
-      </ion-input>
-    </ion-item>
-    <ion-button expand="block" type="submit" [disabled]="!form.valid">Guardar cambios</ion-button>
-    <ion-button expand="block" type="button" (click)="auth.logout()">Cerrar sesión</ion-button>
-  </form>
+  <img class="image-profile" src="../../../assets/imgs/Elipse148@3x.png" alt="">
+
+</div>
+
+<div class="title-content">
+
+  <p class="name">Juan Galván</p>
+
+  <p class="union-date">Te uniste el 12/05/2023</p>
+
+</div>
+
+<div class="card-content" routerLink="/configurar-mis-datos">
+  <div class="content-icon-p">
+  <div class="content-icon">
+    <ion-icon class="wheel" src="../../../assets/icons/Trazado49390.svg"></ion-icon>
+  </div>
+
+  <p class="description-icon">Configurar mis datos</p>
+</div>
+  <ion-icon class="arrow" src="../../../assets/icons/arrow-to-down-right-svgrepo-com.svg"></ion-icon>
+</div>
+
+<div class="card-content-2" routerLink="/privacy-policy">
+  <div class="content-icon-p">
+  <div class="content-icon">
+    <ion-icon class="wheel" src="../../../assets/icons/Trazado49392.svg"></ion-icon>
+  </div>
+
+  <p class="description-icon">Política de Privacidad</p>
+</div>
+  <ion-icon class="arrow" src="../../../assets/icons/arrow-to-down-right-svgrepo-com.svg"></ion-icon>
+</div>
+
+<div class="card-content-3">
+  <div class="content-icon-p">
+  <div class="content-exit">
+    <ion-icon class="exit" src="../../../assets/icons/ArrowExit.svg"></ion-icon>
+  </div>
+
+  <p class="description-icon">Salir de la cuenta</p>
+</div>
+  <ion-icon class="arrow" src="../../../assets/icons/arrow-to-down-right-svgrepo-com.svg"></ion-icon>
+</div>
+
 
 </ion-content>

@@ -1,0 +1,32 @@
+<app-app-header [title]="'Configurar mis datos'"> </app-app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="image-button-content">
+  <img class="image-profile" src="../../../assets/imgs/Elipse148@3x.png" alt="">
+
+  <ion-button class="change-image-button">Cambiar imagen</ion-button>
+</div>
+
+  <ion-item lines="none" class="cards">
+    <ion-input lines="none" slot="start" label="Nombre" placeholder="Juan Galván" ></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="cards">
+    <ion-input lines="none" slot="start" label="Email" placeholder="juan.galvan@correo" ></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="cards">
+    <ion-input lines="none" slot="start" label="Contraseña" placeholder="password-prueba" ></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="cards">
+    <ion-input lines="none" slot="start" label="Repetir Contraseña" placeholder="password-prueba"></ion-input>
+  </ion-item>
+
+<ion-button class="save-changes">Guardar cambios</ion-button>
+
+<ion-button class="last-button">Eliminar cuenta</ion-button>
+
+
+
+</ion-content>

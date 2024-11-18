@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PrivacyPolicyPageRoutingModule } from './privacy-policy-routing.module';
+import { ConfigurarMisDatosPageRoutingModule } from './configurar-mis-datos-routing.module';
 
-import { PrivacyPolicyPage } from './privacy-policy.page';
+import { ConfigurarMisDatosPage } from './configurar-mis-datos.page';
 
 import { ComponentsModule } from 'src/app/components/components.module';
 
@@ -15,9 +15,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    PrivacyPolicyPageRoutingModule,
+    ConfigurarMisDatosPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [PrivacyPolicyPage]
+  declarations: [ConfigurarMisDatosPage]
 })
-export class PrivacyPolicyPageModule {}
+export class ConfigurarMisDatosPageModule {}
