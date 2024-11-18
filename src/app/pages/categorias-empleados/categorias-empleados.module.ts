@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { CategoriasEmpleadosPageRoutingModule } from './categorias-empleados-routing.module';
-
+import { ComponentsModule } from 'src/app/components/components.module';
 import { CategoriasEmpleadosPage } from './categorias-empleados.page';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { CategoriasEmpleadosPage } from './categorias-empleados.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule ,
     CategoriasEmpleadosPageRoutingModule
   ],
   declarations: [CategoriasEmpleadosPage]

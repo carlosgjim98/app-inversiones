@@ -1,0 +1,56 @@
+.empleados-section {
+  
+  
+    .empleados-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1C1B19;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 16px;
+  
+      .empleados-info {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;  
+        
+  
+        .img-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          .img{
+
+            margin-right: 25px;
+            height: 47px;
+            width: 47px;
+          }
+  
+        }
+        .empleados-title {
+          font-size: 15px;
+          font-family: Manrope-Medium;
+          color: #FFFFFF;
+          margin-bottom: 6px;
+        }
+  
+        .empleados-detail {
+          font-size: 13px;
+          font-family: Manrope-Medium;
+          color: #A8A8A8;
+          margin-top: 0;
+        }
+      }
+  
+      .arrow-icon {
+      height: 25px;
+      width: 25px;
+        color: #B7A44F;
+        margin-left: auto;
+      }
+    }
+}

@@ -1,0 +1,102 @@
+
+<ion-content [fullscreen]="true" >
+ 
+  <div class="header">
+    <ion-toolbar class="custom-toolbar">
+  
+  
+      <div class="custom-header">
+        <div class="header-content">
+          <ion-button class="back-button" fill="solid"  (click)="goBack()">
+            <ion-icon class="icono" slot="start" src="../../../assets/icons/arrow-to-down-right-svgrepo-com.svg"></ion-icon>
+          </ion-button>
+         
+  
+  
+        </div>
+      </div>
+    </ion-toolbar>
+  
+    <div class="full-container">
+  
+  
+    <div class="info-section">
+      <h3>Datos generales del proyecto:</h3>
+      <div class="data-item">
+        <span class="label">Nombre</span>
+        <span>Proyecto Casa 4</span>
+      </div>
+      <div class="data-item">
+        <span class="label">Ubicación completa</span>
+        <span>C, Nombre Prueba, 7, Jerez de la Frontera (Cádiz), 11400</span>
+      </div>
+      <div class="data-item">
+        <span class="label">Tipo de propiedad</span>
+        <span>Casa</span>
+      </div>
+      <div class="data-item">
+        <span class="label">Fecha estimada de entrega</span>
+        <span>02/03/2026</span>
+      </div>
+    </div>
+    
+    <!-- Sección de datos financieros -->
+    <div class="financial-data">
+      <h3>Datos financieros:</h3>
+     
+      <div class="data-item">
+        <span class="label">Precio</span>
+        <span>150.000 €</span>
+      </div>
+      <div class="data-item">
+        <span class="label">Formas de pago</span>
+        <span>Pago a plazos (5 plazos)</span>
+      </div>
+      <div class="data-item">
+        <span class="label">gastos asociados</span>
+      
+        <div class="label2-container">
+          <span class="label2">Impuestos</span>
+          <div class="price-container">
+            <span class="price">10.000 €</span>
+          </div>
+        </div>
+      
+        <div class="label2-container">
+          <span class="label2">Notaría</span>
+          <div class="price-container">
+            <span class="price">3. 680 €</span>
+          </div>
+        </div>
+      
+        <div class="label2-container">
+          <span class="label2">Registro</span>
+          <div class="price-container">
+            <span class="price">2.540 €</span>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+      <div class="financial-data">
+        <h3>Documentación aportada:</h3>
+
+        <div class="doc-row">
+          <span class="label">Licencia-vivienda.pdf</span>
+          <img src="assets/imgs/cruz.png" alt="Eliminar" class="delete-icon" />
+        </div>
+
+        <div class="doc-row">
+          <span class="label">Garantia-comprador.pdf</span>
+          <img src="assets/imgs/cruz.png" alt="Eliminar" class="delete-icon" />
+        </div>
+      
+    </div>
+      
+    
+     
+  </div>
+  </div>
+  
+  </ion-content>
+  

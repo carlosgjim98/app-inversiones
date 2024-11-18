@@ -1,0 +1,65 @@
+.turistic-section {
+  
+  
+    .turistic-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1C1B19;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 16px;
+  
+      .turistic-info {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;  
+        
+  
+        .button-container {
+          margin-right: 10px;
+        }
+        
+        .button {
+          --background: #31312f; /* Fondo del botón */
+          --border-radius: 50%; /* Borde redondeado */
+          height: 40px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center; 
+          padding: 0;
+        }
+        
+        .icon {
+          width: 18px; 
+          height: 18px; 
+          object-fit: contain; 
+         
+        }
+        
+        .turistic-title {
+          font-size: 15px;
+          font-family: Manrope-Medium;
+          color: #FFFFFF;
+          margin-bottom: 6px;
+        }
+  
+        .turistic-detail {
+          font-size: 13px;
+          font-family: Manrope-Medium;
+          color: #A8A8A8;
+          margin-top: 0;
+        }
+      }
+  
+      .arrow-icon {
+      height: 25px;
+      width: 25px;
+        color: #B7A44F;
+        margin-left: auto;
+      }
+    }
+}

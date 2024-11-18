@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { ModalController } from '@ionic/angular';
+import { ModalCapturaComponent } from 'src/app/components/modal-captura/modal-captura.component';
+
 
 
 Chart.register(ChartDataLabels);
@@ -15,9 +18,22 @@ export class InicioPage implements OnInit, OnDestroy {
   barChart: any;
   pieChart: any; // Agregar la propiedad pieChart
 
+  constructor(private modalController: ModalController) {}
+
+  async showModal() {
+    const modal = await this.modalController.create({
+      component: ModalCapturaComponent, // Componente del modal
+      cssClass: 'custom-modal-class', // Clase para estilos adicionales
+      backdropDismiss: false, // Evita que se cierre al tocar fuera
+    });
+
+    return await modal.present();
+  }
+
   ngOnInit() {
     this.createBarChart();
     this.createPieChart(); // Crear el gráfico de pastel al iniciar
+    this.showModal();
     
   }
 

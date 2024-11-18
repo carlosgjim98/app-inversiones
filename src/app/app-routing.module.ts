@@ -140,6 +140,22 @@ const routes: Routes = [
   {
     path: 'detalles-inmobiliaria',
     loadChildren: () => import('./pages/detalles-inmobiliaria/detalles-inmobiliaria.module').then( m => m.DetallesInmobiliariaPageModule)
+  },
+  {
+    path: 'detalles-empleados',
+    loadChildren: () => import('./pages/detalles-empleados/detalles-empleados.module').then( m => m.DetallesEmpleadosPageModule)
+  },
+  {
+    path: 'detalles-inquilinos',
+    loadChildren: () => import('./pages/detalles-inquilinos/detalles-inquilinos.module').then( m => m.DetallesInquilinosPageModule)
+  },
+  {
+    path: 'detalles-proyectos-a-futuro',
+    loadChildren: () => import('./pages/detalles-proyectos-a-futuro/detalles-proyectos-a-futuro.module').then( m => m.DetallesProyectosAFuturoPageModule)
+  },
+  {
+    path: 'detalles-facturas',
+    loadChildren: () => import('./pages/detalles-facturas/detalles-facturas.module').then( m => m.DetallesFacturasPageModule)
   }
 
 

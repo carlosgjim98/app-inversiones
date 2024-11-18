@@ -1,13 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>categorias-facturas</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-app-header [title]="'Turístico'"> </app-app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">categorias-facturas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="turistic-section">
+    
+    <div class="turistic-card" routerLink="/detalles-facturas">
+      <div class="turistic-info">
+        <div class="button-container">
+          <ion-button shape="round" class="button">
+            <img slot ="icon-only"src="assets/imgs/icono-facturas.png" alt="Imagen-casa" class="icon" />
+          </ion-button>
+          
+        
+      </div>
+        <div>
+          <p class="turistic-title">Factura Casa de la playa 2</p>
+          <p class="turistic-detail">Factura nº 00000002</p>
+        </div>
+      </div>
+      
+      <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="turistic-card" routerLink="/">
+      <div class="turistic-info">
+        <div class="button-container">
+          <ion-button shape="round" class="button">
+            <img slot ="icon-only"src="assets/imgs/icono-facturas.png" alt="Imagen-casa" class="icon" />
+          </ion-button>
+      </div>
+        <div>
+          <p class="turistic-title">Factura Casa de la playa</p>
+          <p class="turistic-detail">Factura nº 00000001</p>
+        </div>
+      </div>
+      
+      <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+    </div>
+
+  </div>
 </ion-content>

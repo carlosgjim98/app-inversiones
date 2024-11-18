@@ -1,13 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>categorias-inquilinos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-app-header [title]="'Inquilinos'"> </app-app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">categorias-inquilinos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="empleados-section">
+    
+    <div class="empleados-card" routerLink="/detalles-inquilinos">
+      <div class="empleados-info">
+        <div class="img-container">
+          <img src="assets/imgs/Elipse 155@3x.png" alt="Imagen-casa" class="img" />
+      </div>
+        <div>
+          <p class="empleados-title">Ana Pérez Gálvez</p>
+          <p class="empleados-detail">Piso alquiler 1</p>
+        </div>
+      </div>
+      
+      <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+    </div>
+
+   
+  </div>
 </ion-content>

@@ -1,0 +1,143 @@
+.header {
+    height: 305px; /* Altura del header */
+    width: auto;  /* Ancho del header */
+  }
+  
+  .custom-toolbar {
+    height: 100%; /* Asegura que el fondo ocupe todo el ion-toolbar */
+    --background: url('../../../assets/imgs/detalles-inquilinos-header.png') no-repeat center / cover;
+    background-size: contain;
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat !important; /* Evita que la imagen se repita */
+    padding: 10px 15px;
+    box-shadow: 0px 3px 6px #0D0F0D;
+    background-color: transparent; /* Deja el color transparente para ver el fondo */
+  }
+  
+  .custom-header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    
+  }
+  
+
+  
+  .back-button {
+    width: 38px;
+    height: 38px;
+    min-height: unset;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: -30px;
+    --background: #1A1F1D52;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+  }
+  
+  .icono {
+    height: 15px;
+    width: 15px;
+    margin-left: 2px;
+    color: #ffffff;
+  }
+
+  .full-container{
+
+ 
+  }
+  .personal-info{
+    border-bottom: 1px solid #4B4940;
+    padding: 0;
+  }
+
+  .job-info{
+
+    border-bottom: 1px solid #4B4940;
+  }
+
+  .employee-card {
+    
+    
+   
+  
+    .section {
+      margin-bottom: 20px;
+      
+  
+      h3 {
+        font-size: 16px;
+        color:#B7A44F;
+        margin-bottom: 13px;
+        font-family: Manrope-Bold;
+        margin-left: 16px;
+        margin-top: 16px;
+      }
+  
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: 1px solid #141411;
+        padding: 10px 15px;
+        background-color: #1F1E1C;
+        min-height: 55px;
+        align-items: center;
+        margin: 0px 16px 16px 16px;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+  
+        .label {
+          font-family: Manrope-Regular;
+          font-size: 15px;
+         
+        }
+  
+        .value {
+          color: #BFBFBF;
+          font-size: 15px;
+          text-align: right;
+        }
+      }
+
+      .doc-row {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px #0D0C0C;
+        padding: 10px 15px;
+        background-color: #403F3E;
+        min-height: 55px;
+        align-items: center;
+        margin: 0px 16px 16px 16px;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+  
+        .label {
+          font-family: Manrope-Regular;
+          font-size: 15px;
+         
+        }
+  
+        .value {
+          color: #BFBFBF;
+          font-size: 15px;
+          text-align: right;
+        }
+        .delete-icon {
+            width: 14px; 
+            height: 14px;
+            cursor: pointer; 
+          }
+      }
+    }
+  }
+  

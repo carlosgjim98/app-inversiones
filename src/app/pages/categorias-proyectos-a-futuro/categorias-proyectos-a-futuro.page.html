@@ -1,13 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>categorias-proyectos-a-futuro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-app-header [title]="'Turístico'"> </app-app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">categorias-proyectos-a-futuro</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="turistic-section">
+    
+    <div class="turistic-card" routerLink="/detalles-proyectos-a-futuro">
+      <div class="turistic-info">
+        <div class="img-container">
+          <img src="assets/imgs/proyectos a futuro/Rectángulo 19890@3x.png" alt="Imagen-casa" class="img" />
+      </div>
+        <div>
+          <p class="turistic-title">Casa de la playa</p>
+          <p class="turistic-detail">C/ Nombre Prueba, 1</p>
+        </div>
+      </div>
+      
+      <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="turistic-card" routerLink="/">
+      <div class="turistic-info">
+        <div class="img-container">
+          <img src="assets/imgs/proyectos a futuro/Rectángulo 19892@3x.png" alt="Imagen-casa" class="img" />
+      </div>
+        <div>
+          <p class="turistic-title">Casa de la playa</p>
+          <p class="turistic-detail">C/ Nombre Prueba, 1</p>
+        </div>
+      </div>
+      
+      <ion-icon class="arrow-icon" name="chevron-forward-outline"></ion-icon>
+    </div>
+
+  </div>
 </ion-content>
