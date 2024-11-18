@@ -161,7 +161,11 @@ const routes: Routes = [
     {
     path: 'configurar-mis-datos',
     loadChildren: () => import('./pages/configurar-mis-datos/configurar-mis-datos.module').then( m => m.ConfigurarMisDatosPageModule)
+  },  {
+    path: 'notificaciones',
+    loadChildren: () => import('./pages/notificaciones/notificaciones.module').then( m => m.NotificacionesPageModule)
   }
+
 
 
 
