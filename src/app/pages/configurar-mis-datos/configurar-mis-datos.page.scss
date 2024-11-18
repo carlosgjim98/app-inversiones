@@ -1,0 +1,58 @@
+.image-button-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-profile{
+    height: 148px;
+    width: 148px;
+}
+
+.change-image-button{
+    width: 136px;
+    height: 34px;
+    min-height: 34px;
+    --border-radius: 17px;
+    font-size: 14px;
+}
+
+.cards{
+    --background: #1F1E1C;
+    border-radius: 10px;
+    height: 55px;
+    background: #1F1E1C;
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.cards:focus-within{
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+ion-input{
+    background: #1F1E1C;
+    // --padding-end: 16px;
+    justify-content: space-between;
+    width: 100% !important;
+    text-align: end;
+}
+
+.save-changes{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.last-button{
+    --background:#1C1B19 ;
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+}

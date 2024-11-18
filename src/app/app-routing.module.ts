@@ -140,6 +140,10 @@ const routes: Routes = [
   {
     path: 'detalles-inmobiliaria',
     loadChildren: () => import('./pages/detalles-inmobiliaria/detalles-inmobiliaria.module').then( m => m.DetallesInmobiliariaPageModule)
+  },
+  {
+    path: 'configurar-mis-datos',
+    loadChildren: () => import('./pages/configurar-mis-datos/configurar-mis-datos.module').then( m => m.ConfigurarMisDatosPageModule)
   }
 
 

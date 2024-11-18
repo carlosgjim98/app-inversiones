@@ -4,3 +4,121 @@ ion-avatar{
     margin:0 auto;
     margin-bottom: 10px;
 }
+
+.image-content{
+    border: 1px solid #B7A44F;
+    border-radius: 50%;
+    height: 126px;
+    width: 126px;
+    align-items: center;
+    padding: 2%;
+    align-content: center;
+    margin-left: 135px;
+    margin-top: 80px;
+}
+
+.image-profile{
+    height: 106px;
+    width: 106px;
+}
+
+.title-content{
+    width: 100%;
+    text-align: center;
+}
+
+.name{
+    font-size: 22px;
+    font-family: InterBold;
+    color: white;
+}
+
+.union-date{
+    font-size: 14px;
+    font-family: InterRegular;
+    color: #BFBFBF;
+}
+
+.card-content{
+    width: 398px;
+    height: 81px;
+    border-radius: 10px;
+    background: #1C1B19;
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.card-content-2{
+    width: 398px;
+    height: 81px;
+    border-radius: 10px;
+    background: #1C1B19;
+    display: flex;
+    align-items: center;
+    gap: 136px;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.card-content-3{
+    width: 398px;
+    height: 81px;
+    border-radius: 10px;
+    background: #1C1B19;
+    display: flex;
+    align-items: center;
+    gap: 163px;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.content-icon-p{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-icon{
+    height: 35px;
+    width: 35px;
+    background: #31312F;
+    border-radius: 50%;
+    padding-left: 5%;
+    padding-top: 4.5%;
+    
+}
+
+.wheel{
+    width: 17.45px;
+    height: 18.2px;
+    color: #B7A44F;
+}
+
+.description-icon{
+    font-size: 15px;
+    font-family: ManropeMedium;
+    color: white;
+}
+
+.arrow{
+    height: 40%;
+    transform: rotate(180deg);
+    color: #B7A44F;
+}
+
+.exit{
+    height: 22.55px;
+    width: 22.55px;
+}
+
+.content-exit{
+    height: 35px;
+    width: 35px;
+    background: #31312F;
+    border-radius: 50%;
+    padding-left: 4.5%;
+    padding-top: 4%;
+}
