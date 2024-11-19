@@ -39,7 +39,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#FFD700',
               backgroundColor: 'rgba(255, 215, 0, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0.4,
+              pointRadius: 0, // Oculta los puntos
+              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
             },
             {
               label: 'Indx A&B 400',
@@ -47,7 +49,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#1E90FF',
               backgroundColor: 'rgba(30, 144, 255, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0.4,
+              pointRadius: 0, // Oculta los puntos
+              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
             },
             {
               label: 'App Inc.',
@@ -55,7 +59,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#87CEFA',
               backgroundColor: 'rgba(135, 206, 250, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0.4,
+              pointRadius: 0, // Oculta los puntos
+              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
             },
             {
               label: 'S.E Ab',
@@ -63,7 +69,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#4682B4',
               backgroundColor: 'rgba(70, 130, 180, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0.4,
+              pointRadius: 0, // Oculta los puntos
+              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
             }
           ]
         },
@@ -71,8 +79,15 @@ export class FondosInversionDetailsPage implements OnInit {
           responsive: true,
           plugins: {
             legend: {
+              display: false, // Oculta la leyenda si no la necesitas
+              position: 'bottom',
+            },
+            tooltip: {
+              enabled: false, // Desactiva los tooltips que aparecen al pasar el ratón
+            },
+            // Desactiva los datalabels si están activos
+            datalabels: {
               display: false,
-              position: 'bottom'
             }
           },
           scales: {
@@ -83,17 +98,19 @@ export class FondosInversionDetailsPage implements OnInit {
               ticks: {
                 stepSize: 10,
                 callback: function(value) {
-                  return value + '%';
+                  return value + '%'; // Esto formatea las etiquetas del eje Y
                 }
               }
             },
             x: {
-              display: true
+              display: true,
             }
           }
         }
       });
     }
   }
+  
+  
 }
 
