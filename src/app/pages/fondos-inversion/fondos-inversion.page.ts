@@ -69,7 +69,7 @@ export class FondosInversionPage implements OnInit, OnDestroy {
           borderColor: '#874FB8', 
           fill: false,
           tension: 0,
-          pointRadius: 0, // Oculta los puntos
+          pointRadius: 0, 
           borderWidth: 2,
         },
         {
@@ -78,7 +78,7 @@ export class FondosInversionPage implements OnInit, OnDestroy {
           borderColor: '#4F4FB8', 
           fill: false,
           tension: 0,
-          pointRadius: 0, // Oculta los puntos
+          pointRadius: 0, 
           borderWidth: 2,
         },
         {
@@ -87,7 +87,7 @@ export class FondosInversionPage implements OnInit, OnDestroy {
           borderColor: '#DC5C7E', 
           fill: false,
           tension: 0,
-          pointRadius: 0, // Oculta los puntos
+          pointRadius: 0, 
           borderWidth: 2,
         },
       ],
@@ -99,16 +99,16 @@ export class FondosInversionPage implements OnInit, OnDestroy {
       data: data,
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         plugins: {
           legend: {
-            display: false, // Desactiva la leyenda
+            display: false, 
           },
           tooltip: {
-            enabled: false, // Desactiva los tooltips
+            enabled: false, 
           },
           datalabels: {
-            display: false, // Desactiva las etiquetas de los datos si el plugin está habilitado
+            display: false, 
           }
         },
         scales: {
@@ -138,8 +138,8 @@ export class FondosInversionPage implements OnInit, OnDestroy {
               align: 'center',
               callback: function(value, index, values) {
                 const labels = ['', '', '', 'Enero \'24', '', '', '', 'Mayo \'24', '', '', '', 'Septiembre \'24', ''];
-                // Asegurarse de que solo se muestren las fechas en las posiciones correctas
-                return labels[index] || ''; // Si no es una posición con etiqueta, se deja vacío
+                
+                return labels[index] || ''; 
               },
             },
             grid: {

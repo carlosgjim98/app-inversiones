@@ -31,7 +31,7 @@ export class FondosInversionDetailsPage implements OnInit {
       new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['', '', '', '', '2022', '', '', '', '', '2023', '', '', '', '', '2024', '', '',],
+          labels: ['', '', '', '2022', '', '', '', '2023', '', '', '', '2024', ''],
           datasets: [
             {
               label: 'A&B',
@@ -117,7 +117,18 @@ export class FondosInversionDetailsPage implements OnInit {
            
  
             x: {
-              display: true
+              ticks: {
+                color: '#D9D9D9',
+                align: 'center',
+                callback: function(value, index, values) {
+                  const labels = ['', '', '', '2022', '', '', '', '2023', '', '', '', '2024', ''];
+                  
+                  return labels[index] || ''; 
+                },
+              },
+              grid: {
+                color: 'transparent',
+              },
             }
           },
         }
