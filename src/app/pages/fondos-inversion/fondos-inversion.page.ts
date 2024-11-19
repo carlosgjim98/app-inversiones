@@ -52,7 +52,11 @@ export class FondosInversionPage implements OnInit, OnDestroy {
   
     // Ajusta los datos para distribuirse mejor en el gráfico
     const data = {
-      labels: ['', '', '', 'Enero \'24', '', '', '', 'Mayo \'24', '', '', '', 'Septiembre \'24', ''],
+      labels: [
+        'Enero \'24', 'Febrero \'24', 'Marzo \'24', 'Abril \'24', 
+        'Mayo \'24', 'Junio \'24', 'Julio \'24', 'Agosto \'24', 
+        'Septiembre \'24', 'Octubre \'24', 'Noviembre \'24', 'Diciembre \'24', ''
+    ],
       datasets: [
         {
           label: 'Línea Dorada',
@@ -134,10 +138,17 @@ export class FondosInversionPage implements OnInit, OnDestroy {
           },
           x: {
             ticks: {
+              maxRotation: 0, // Impide rotar el texto
+              minRotation: 0, // Asegura que los valores se muestren en horizontal
               color: '#D9D9D9',
               align: 'center',
+              font: {
+                size: 10, // Reduce el tamaño de la fuente
+            },
               callback: function(value, index, values) {
-                const labels = ['', '', '', 'Enero \'24', '', '', '', 'Mayo \'24', '', '', '', 'Septiembre \'24', ''];
+                const labels = [ '', 'Febrero \'24', 'Marzo \'24', 'enero \'24', 
+        '', 'Junio \'24', 'Mayo \'24', 'Agosto \'24', 
+        'Septiembre \'24', 'Sep \'24', 'Noviembre \'24', 'Diciembre \'24', ''];
                 
                 return labels[index] || ''; 
               },
