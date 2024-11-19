@@ -31,53 +31,53 @@ export class FondosInversionDetailsPage implements OnInit {
       new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['2022', '2023', '2024'],
+          labels: ['', '', '', '', '2022', '', '', '', '', '2023', '', '', '', '', '2024', '', '',],
           datasets: [
             {
               label: 'A&B',
-              data: [5, 10, 15, -5, 0, 10, -10, 5, -5, 20, 10, 0],
+              data: [0, 10, 8, 17, 7, 16, 28, 15, 21, 17, 25, 20, 23, 7, 22, 10, 17],
               borderColor: '#FFD700',
               backgroundColor: 'rgba(255, 215, 0, 0.2)',
               fill: false,
+              tension: 0,
+              pointRadius: 0,
+              borderWidth: 2,
               tension: 0.4,
               pointRadius: 0, // Oculta los puntos
               borderWidth: 2, // Ajusta el grosor de la línea si es necesario
             },
             {
               label: 'Indx A&B 400',
-              data: [-10, -5, 10, 5, -5, 0, 10, 15, 5, 0, -10, 10],
+              data: [0, -5, 0, -10, 20, 15, -3, 15, 5, 10, 0, 4, 2, 20, 4, 18, 10],
               borderColor: '#1E90FF',
               backgroundColor: 'rgba(30, 144, 255, 0.2)',
               fill: false,
-              tension: 0.4,
-              pointRadius: 0, // Oculta los puntos
-              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
+              tension: 0.4
             },
             {
               label: 'App Inc.',
-              data: [-5, 15, 0, 10, -10, 5, -5, 0, 15, -10, 5, -5],
+              data: [0, -15, -10, -18, 10, 5, -10, 23, 15, 20, 10, 15, 11, 26, 15, 25, 15],
               borderColor: '#87CEFA',
               backgroundColor: 'rgba(135, 206, 250, 0.2)',
               fill: false,
-              tension: 0.4,
-              pointRadius: 0, // Oculta los puntos
-              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
+              tension: 0.4
             },
             {
               label: 'S.E Ab',
-              data: [10, -10, 5, 15, 0, -5, 10, 0, -15, 5, -5, 15],
+              data: [0, -15, -10, -18, -7, -16, -30, -15, -20, -17, -27, -2, -5, 10, -3, 10, 0],
               borderColor: '#4682B4',
               backgroundColor: 'rgba(70, 130, 180, 0.2)',
               fill: false,
-              tension: 0.4,
-              pointRadius: 0, // Oculta los puntos
-              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
+              tension: 0.4
             }
           ]
         },
         options: {
           responsive: true,
           plugins: {
+            datalabels: {
+              display: false, // Hace que no se muestren los número sobre la línea de la gráfica
+            },
             legend: {
               display: false, // Oculta la leyenda si no la necesitas
               position: 'bottom',
@@ -88,24 +88,25 @@ export class FondosInversionDetailsPage implements OnInit {
             // Desactiva los datalabels si están activos
             datalabels: {
               display: false,
+              position: 'bottom'
             }
           },
           scales: {
             y: {
               beginAtZero: false,
-              min: -20,
-              max: 20,
+              min: -40,
+              max: 40,
               ticks: {
-                stepSize: 10,
+                stepSize: 20,
                 callback: function(value) {
-                  return value + '%'; // Esto formatea las etiquetas del eje Y
+                  return value + '%';
                 }
               }
             },
             x: {
               display: true,
             }
-          }
+          },
         }
       });
     }
