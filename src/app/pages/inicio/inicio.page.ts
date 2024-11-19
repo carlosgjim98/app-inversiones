@@ -3,7 +3,7 @@ import { Chart } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { ModalController } from '@ionic/angular';
 import { ModalCapturaComponent } from 'src/app/components/modal-captura/modal-captura.component';
-import ChartAnnotation from 'chartjs-plugin-annotation';
+
 
 Chart.register(ChartDataLabels);
 
