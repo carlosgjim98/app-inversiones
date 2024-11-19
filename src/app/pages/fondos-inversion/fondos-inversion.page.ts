@@ -52,7 +52,7 @@ export class FondosInversionPage implements OnInit, OnDestroy {
   
     // Ajusta los datos para distribuirse mejor en el gráfico
     const data = {
-      labels: ['', '', '', 'Enero \'24', '', '', '', 'Mayo \'24',  '', '', '', 'Septiembre \'24',  ''],
+      labels: ['', '', '', 'Enero \'24', '', '', '', 'Mayo \'24', '', '', '', 'Septiembre \'24', ''],
       datasets: [
         {
           label: 'Línea Dorada',
@@ -136,6 +136,11 @@ export class FondosInversionPage implements OnInit, OnDestroy {
             ticks: {
               color: '#D9D9D9',
               align: 'center',
+              callback: function(value, index, values) {
+                const labels = ['', '', '', 'Enero \'24', '', '', '', 'Mayo \'24', '', '', '', 'Septiembre \'24', ''];
+                // Asegurarse de que solo se muestren las fechas en las posiciones correctas
+                return labels[index] || ''; // Si no es una posición con etiqueta, se deja vacío
+              },
             },
             grid: {
               color: 'transparent',
@@ -145,5 +150,4 @@ export class FondosInversionPage implements OnInit, OnDestroy {
       },
     });
   }
-  
 }

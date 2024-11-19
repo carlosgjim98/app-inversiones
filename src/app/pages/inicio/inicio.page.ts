@@ -3,6 +3,7 @@ import { Chart } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { ModalController } from '@ionic/angular';
 import { ModalCapturaComponent } from 'src/app/components/modal-captura/modal-captura.component';
+import ChartAnnotation from 'chartjs-plugin-annotation';
 
 Chart.register(ChartDataLabels);
 
@@ -125,76 +126,113 @@ export class InicioPage implements OnInit, OnDestroy {
   private createPieChart() {
     const ctx = document.getElementById('pieChart') as HTMLCanvasElement;
   
-    // Ajustar el tamaño del canvas
-    const canvas = document.getElementById('pieChart') as HTMLCanvasElement;
-   
-  
-    // Destruir el gráfico de pastel existente si ya existe
+    // Destruir el gráfico existente si ya existe
     if (this.pieChart) {
-      Chart.getChart("pieChart")?.destroy();  // Destruir el gráfico de pastel
+      Chart.getChart("pieChart")?.destroy();
     }
   
-    // Crear el gráfico de pastel
+    // Obtener el contexto 2D
+    const context = ctx.getContext('2d');
+    if (!context) {
+      console.error("No se pudo obtener el contexto del canvas");
+      return;
+    }
+  
+    // Crear gradientes para los colores
+    const gradient1 = context.createLinearGradient(0, 0, ctx.width, ctx.height);
+    gradient1.addColorStop(0, '#AFD7F8');
+    gradient1.addColorStop(0.5, '#93c7f4');
+    gradient1.addColorStop(1, '#c8e2f8');
+  
+    const gradient2 = context.createLinearGradient(0, 0, ctx.width, ctx.height);
+    gradient2.addColorStop(0, '#0A4E88');
+    gradient2.addColorStop(1, '#183d61');
+  
+    const gradient3 = context.createLinearGradient(0, 0, ctx.width, ctx.height);
+    gradient3.addColorStop(0, '#2f89d5');
+    gradient3.addColorStop(0.5, '#2f89d5');
+    gradient3.addColorStop(1, '#6faadc');
+  
+    const gradient4 = context.createLinearGradient(0, 0, ctx.width, ctx.height);
+    gradient4.addColorStop(0, '#B8A44F');
+    gradient4.addColorStop(0.5, '#8C762F');
+    gradient4.addColorStop(1, '#4A4222');
+  
+    // Crear el gráfico
     this.pieChart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: ['A&B', 'Indx A&B 400', 'App Inc.', 'S.E Ab'],
+        labels: ['5%', '15%', '30%', '50%'],
         datasets: [
           {
-            data: [ 5,15,30,50],
-            backgroundColor: ['#AFD7F8','#0A4E88', '#5CA1DC' , '#B8A44F'], 
+            data: [5, 15, 30, 50],
+            backgroundColor: [gradient1, gradient2, gradient3, gradient4],
             borderWidth: 0,
+            offset: Array(4).fill(0), // Inicialmente, todas las cuñas están sin desplazamiento
           },
         ],
       },
       options: {
-        aspectRatio: 1, 
-        rotation: -90,
-        circumference: 180,
+        rotation: -90, // Rotación inicial
+        circumference: 180, // Solo media circunferencia
         responsive: true,
-        layout: {
-          padding: {
-            top: 0,
-            right:40,
-            left:60,
-             // Espacio adicional en la parte superior
-          },
-        },
         plugins: {
           legend: {
-            display: false,
-            position: 'bottom',
-            labels: {
-              color: '#FFF',
-              usePointStyle: true,
-              padding: 10,
-              boxWidth: 20,
-            },
+            display: false, // No mostrar leyenda
           },
           tooltip: {
-            enabled: false,
+            enabled: false, // Desactivar tooltips
           },
           datalabels: {
             color: '#FFF',
             align: 'end',
             anchor: 'end',
-            formatter: (value, context) => {
-              const label = context.chart.data.labels[context.dataIndex];
-              return ` ${value}%`;
-            },
-            borderColor: '#FFF',
-            borderWidth: 1,
-            borderRadius: 4,
-            backgroundColor: '#333',
+            formatter: (value) => `${value}%`,
+            borderColor: 'transparent',
+            borderWidth: 0,
+            backgroundColor: 'transparent',
             font: {
               size: 12,
             },
-            padding: {},
           },
+        },
+        layout: {
+          padding: {
+            top: 0,
+            right: 40,
+            left: 40,
+          },
+        },
+        onClick: (event, elements) => {
+          if (elements.length > 0) {
+            const index = elements[0].index; // Índice del segmento clicado
+            const currentDataset = this.pieChart.data.datasets![0];
+  
+            // Si el segmento ya está separado, regresa al lugar original
+            if (currentDataset.offset[index] === 15) {
+              currentDataset.offset[index] = 0;
+            } else {
+              // Reseteamos cualquier otro segmento previamente separado
+              currentDataset.offset = Array(currentDataset.data.length).fill(0);
+  
+              // Desplazamos el segmento clicado
+              currentDataset.offset[index] = 15; // Separación en píxeles
+            }
+  
+            // Actualizamos el gráfico para reflejar el cambio
+            this.pieChart.update();
+  
+            // Opcional: Realizar alguna acción adicional con el segmento clicado
+            const label = this.pieChart.data.labels![index];
+            const value = this.pieChart.data.datasets![0].data[index];
+            console.log(`Hiciste clic en el segmento: ${label} (${value}%)`);
+          }
         },
       },
     });
-  }
+  } 
+  
+  
   
 
   updateBarChartData() {

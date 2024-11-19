@@ -51,11 +51,12 @@ ion-content{
         font-family: Manrope-SemiBold;
         color: #ffffff; 
         margin-top: 0;
+        margin-bottom: 0px;
 
       }
 
       .gains{
-        margin-top: 9px;
+        margin-top: 10px;
         font-size: 14px;
         font-family: Manrope-SemiBold;
         color: #45B456; 
@@ -75,39 +76,46 @@ ion-content{
     
   
 
-      .segment-button-checked{
-
-
-        --ion-color-step-350:transparent !important;
-        color:#ffffff
-     }
-
-     ion-segment {
-        display: flex; /* Asegúrate de que sea flexible */
-        background-color: transparent;
-        gap: 6px; /* Ajusta a 0 si no deseas espacio adicional */
+      ion-segment{
+        background-color:transparent;
+        display: flex; 
+        gap:5px;
+        margin: 0;
         justify-content: flex-start; 
+       
+        ion-segment-button {
+          --background: #4B4D4B;
+          font-size: 12px;
+          color: #939493;
+          font-family: Manrope-SemiBold;
+          width: 50px; 
+          height: 25px; 
+          min-height: unset;
+          min-width: unset;
+          text-align: center; 
+          line-height: 25px; 
+          --background-checked: #B7A44F;
+          padding: 0; 
+      }
+        .segment-button-checked{
+  
+  
+          --ion-color-step-350:transparent !important;
+          color:#ffffff;
         
-        
-        
-    }
-    
-    ion-segment-button {
-        color: #D9D9D9;
-        font-weight: bold;
-        --background-checked: #B7A44F;
-        --box-shadow: none !important;
-        min-width: unset;
-        width: 55px; /* Ajusta el ancho según lo necesites */
-        --background: #4B4D4B;
-        font-size: 13px;
-        font-family: Manrope-SemiBold;
-        padding: 0; /* Asegúrate de que el padding sea cero */
-      
-        
+       }
+      }
+
+      .date-range {
+        font-size: 16px;
+        font-family: Manrope-Medium;
+        color: #FFFFFF;
+        margin-bottom: 0px; /* Espacio entre el rango de fechas y el gráfico */
+        margin-top: 10px;
     }
     
       .chart-content {
+        margin-top: -10px;
         display: flex;
         justify-content: center;
         align-items: center;
