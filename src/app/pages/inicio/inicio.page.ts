@@ -15,23 +15,32 @@ export class InicioPage implements OnInit, OnDestroy {
   selectedYear: string = '2024';
   barChart: any;
   pieChart: any;
+  modalShown: boolean = false;  // Variable para controlar si el modal ya fue mostrado
 
   constructor(private modalController: ModalController) {}
 
   async showModal() {
+    // Verificar si el modal ya ha sido mostrado
+    if (this.modalShown) {
+      return; // Si ya se mostró, no hacer nada
+    }
+
     const modal = await this.modalController.create({
       component: ModalCapturaComponent, // Componente del modal
       cssClass: 'custom-modal-class', // Clase para estilos adicionales
       backdropDismiss: false, // Evita que se cierre al tocar fuera
     });
 
-    return await modal.present();
+    await modal.present();
+
+    // Cambiar la bandera a true después de mostrar el modal
+    this.modalShown = true;
   }
 
   ngOnInit() {
     this.createBarChart();
     this.createPieChart();
-    this.showModal();
+    this.showModal(); // Mostrar el modal al inicializar la página
   }
 
   ngOnDestroy() {
@@ -113,14 +122,18 @@ export class InicioPage implements OnInit, OnDestroy {
     });
   }
 
-  createPieChart() {
+  private createPieChart() {
     const ctx = document.getElementById('pieChart') as HTMLCanvasElement;
-
+  
+    // Ajustar el tamaño del canvas
+    const canvas = document.getElementById('pieChart') as HTMLCanvasElement;
+   
+  
     // Destruir el gráfico de pastel existente si ya existe
     if (this.pieChart) {
       Chart.getChart("pieChart")?.destroy();  // Destruir el gráfico de pastel
     }
-
+  
     // Crear el gráfico de pastel
     this.pieChart = new Chart(ctx, {
       type: 'pie',
@@ -128,23 +141,28 @@ export class InicioPage implements OnInit, OnDestroy {
         labels: ['A&B', 'Indx A&B 400', 'App Inc.', 'S.E Ab'],
         datasets: [
           {
-            data: [50, 30, 15, 5],
-            backgroundColor: ['#B8A44F', '#5CA1DC', '#0A4E88', '#AFD7F8'],
+            data: [ 5,15,30,50],
+            backgroundColor: ['#AFD7F8','#0A4E88', '#5CA1DC' , '#B8A44F'], 
             borderWidth: 0,
           },
         ],
       },
       options: {
-        aspectRatio: 1.8,
+        aspectRatio: 1, 
+        rotation: -90,
+        circumference: 180,
         responsive: true,
         layout: {
           padding: {
-            top: 35, // Espacio adicional en la parte superior
+            top: 0,
+            right:40,
+            left:60,
+             // Espacio adicional en la parte superior
           },
         },
         plugins: {
           legend: {
-            display: true,
+            display: false,
             position: 'bottom',
             labels: {
               color: '#FFF',
@@ -171,16 +189,13 @@ export class InicioPage implements OnInit, OnDestroy {
             font: {
               size: 12,
             },
-            padding: {
-              bottom: 2,
-              left: 5,
-              right: 5,
-            },
+            padding: {},
           },
         },
       },
     });
   }
+  
 
   updateBarChartData() {
     // Actualiza los datos del gráfico de barras según el año seleccionado

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import {  registerables } from 'chart.js';
-
+ 
 Chart.register(...registerables);
 @Component({
   selector: 'app-fondos-inversion-details',
@@ -10,13 +10,13 @@ Chart.register(...registerables);
 })
 export class FondosInversionDetailsPage implements OnInit {
   lineChart: any;
-
+ 
   constructor() { }
-
+ 
   ngOnInit() {
-    
+   
   }
-
+ 
   ngOnDestroy() {
     // Destruir los gráficos al salir de la página
     if (this.lineChart) {
@@ -26,7 +26,7 @@ export class FondosInversionDetailsPage implements OnInit {
   }
   ngAfterViewInit() {
     const ctx = (document.getElementById('lineChart2') as HTMLCanvasElement)?.getContext('2d');
-    
+   
     if (ctx) {
       new Chart(ctx, {
         type: 'line',
@@ -109,13 +109,13 @@ export class FondosInversionDetailsPage implements OnInit {
               grid: {
                 color: '#444', // Color de las líneas de la cuadrícula
                 tickLength: 20,
-                lineWidth: 1, 
-                
+                lineWidth: 1,
+               
               },
             },
-
-            
-
+ 
+           
+ 
             x: {
               display: true
             }
@@ -125,4 +125,3 @@ export class FondosInversionDetailsPage implements OnInit {
     }
   }
 }
-
