@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import {  registerables } from 'chart.js';
-
+ 
 Chart.register(...registerables);
 @Component({
   selector: 'app-fondos-inversion-details',
@@ -10,13 +10,13 @@ Chart.register(...registerables);
 })
 export class FondosInversionDetailsPage implements OnInit {
   lineChart: any;
-
+ 
   constructor() { }
-
+ 
   ngOnInit() {
-    
+   
   }
-
+ 
   ngOnDestroy() {
     // Destruir los gráficos al salir de la página
     if (this.lineChart) {
@@ -26,7 +26,7 @@ export class FondosInversionDetailsPage implements OnInit {
   }
   ngAfterViewInit() {
     const ctx = (document.getElementById('lineChart2') as HTMLCanvasElement)?.getContext('2d');
-    
+   
     if (ctx) {
       new Chart(ctx, {
         type: 'line',
@@ -42,9 +42,6 @@ export class FondosInversionDetailsPage implements OnInit {
               tension: 0,
               pointRadius: 0,
               borderWidth: 2,
-              tension: 0.4,
-              pointRadius: 0, // Oculta los puntos
-              borderWidth: 2, // Ajusta el grosor de la línea si es necesario
             },
             {
               label: 'Indx A&B 400',
@@ -52,7 +49,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#1E90FF',
               backgroundColor: 'rgba(30, 144, 255, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0,
+              pointRadius: 0,
+              borderWidth: 2,
             },
             {
               label: 'App Inc.',
@@ -60,7 +59,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#87CEFA',
               backgroundColor: 'rgba(135, 206, 250, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0,
+              pointRadius: 0,
+              borderWidth: 2,
             },
             {
               label: 'S.E Ab',
@@ -68,7 +69,9 @@ export class FondosInversionDetailsPage implements OnInit {
               borderColor: '#4682B4',
               backgroundColor: 'rgba(70, 130, 180, 0.2)',
               fill: false,
-              tension: 0.4
+              tension: 0,
+              pointRadius: 0,
+              borderWidth: 2,
             }
           ]
         },
@@ -79,17 +82,12 @@ export class FondosInversionDetailsPage implements OnInit {
               display: false, // Hace que no se muestren los número sobre la línea de la gráfica
             },
             legend: {
-              display: false, // Oculta la leyenda si no la necesitas
-              position: 'bottom',
-            },
-            tooltip: {
-              enabled: false, // Desactiva los tooltips que aparecen al pasar el ratón
-            },
-            // Desactiva los datalabels si están activos
-            datalabels: {
               display: false,
               position: 'bottom'
-            }
+            },
+            tooltip: {
+              enabled: false // Desactiva los tooltips
+          }
           },
           scales: {
             y: {
@@ -99,19 +97,31 @@ export class FondosInversionDetailsPage implements OnInit {
               ticks: {
                 stepSize: 20,
                 callback: function(value) {
-                  return value + '%';
+                  // return value + '%';
+                  // Evitar mostrar el símbolo '%' cuando el valor es 40
+                if (value === 40 || value === -40) {
+                  return "";  // Devuelve solo el valor sin el símbolo '%'
                 }
-              }
+                return String(value) + '%';  // Agrega el símbolo '%' a otros valores
+                },
+                 display: true
+              },
+              grid: {
+                color: '#444', // Color de las líneas de la cuadrícula
+                tickLength: 20,
+                lineWidth: 1,
+               
+              },
             },
+ 
+           
+ 
             x: {
-              display: true,
+              display: true
             }
           },
         }
       });
     }
   }
-  
-  
 }
-
