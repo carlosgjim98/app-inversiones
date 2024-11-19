@@ -80,7 +80,7 @@ export class InicioPage implements OnInit, OnDestroy {
         datasets: [
           {
             label: 'Crecimiento',
-            data: [25, 30, 27, 32, 29, 33, 28, 35, 30, 38, 37, 80], // Datos de ejemplo
+            data: [25, 30, 27, 32, 29, 33, 35, 39, 43, 47, 51, 57], // Datos de ejemplo
             backgroundColor: gradient,
             barThickness: 12,
           },
