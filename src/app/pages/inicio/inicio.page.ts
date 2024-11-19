@@ -88,6 +88,9 @@ export class InicioPage implements OnInit, OnDestroy {
       options: {
         responsive: true,
         plugins: {
+          datalabels: {
+            display: false, // Hace que no se muestren los número sobre la línea de la gráfica
+          },
           legend: { display: false },
         },
         scales: {
