@@ -1,12 +1,15 @@
 ion-toolbar{
 
     height: 137px;
+    width: 100%;
+    padding-right: 0px;
 }
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
+    min-width: 100%;
 
     .header-text {
         display: flex;
@@ -34,8 +37,8 @@ ion-toolbar{
     }
 
     .alert-button {
-        margin-top: 10px;
-        margin-left: 100px;
+        
+        margin-right: 0;
         padding: 0;
         --background:#292B29 ;
         height: 48px ;

@@ -21,8 +21,21 @@
 .title-content{
     width: 100%;
     text-align: center;
+    margin-top: 10px;
+    padding: 0;  /* Elimina el relleno dentro del div */
 }
-
+.name, .union-date {
+    margin: 0;  /* Elimina el margen de los elementos p */
+    padding: 0;  /* Elimina el relleno dentro de los p */
+  }
+  
+  .name {
+    margin-bottom: 5px;  /* Espacio entre el nombre y la fecha, ajustable */
+  }
+  
+  .union-date {
+    margin-top: 0;  /* No hay espacio extra arriba de la fecha */
+  }
 .name{
     font-size: 22px;
     font-family: InterBold;
